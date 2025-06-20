@@ -255,7 +255,7 @@ export default function Contact() {
               </div>
 
               {/* Quick Response Promise */}
-              <div className="bg-[#68FFFF]/10 backdrop-blur-sm rounded-xl p-6 mt-6 border border-[#68FFFF]/30">
+              <div className="bg-[#68FFFF]/10 backdrop-blur-sm rounded-xl p-11 mt-6 border border-[#68FFFF]/30">
                 <div className="text-center">
                   <Clock className="w-8 h-8 text-[#68FFFF] mx-auto mb-2" />
                   <h4 className="font-bold text-[#FFFFFF] mb-2">

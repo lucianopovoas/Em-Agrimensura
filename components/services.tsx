@@ -41,7 +41,7 @@ export default function Services() {
     },
     {
       icon: Cog,
-      title: "Levantamento Topográfico com LiDAR",
+      title: "Levantamento Topográfico com LIDAR",
       description:
         "Mapeamento 3D de alta densidade e precisão utilizando tecnologia lidar embarcada no sensor DJI Zenmuse L2. Ideal para áreas com vegetação densa ou difícil acesso, gerando nuvens de pontos, modelos digitais de terreno e ortomosaicos com excelente acurácia.",
       color: "from-[#011B8B] to-[#2F81BF]",
@@ -76,11 +76,53 @@ export default function Services() {
     },
   ];
 
+  const projects = [
+    {
+      icon: Map,
+      title: "Terraplenagem",
+      description:
+        "Projeto de movimentação de terra com análise volumétrica, cortes e aterros balanceados, definição de platôs e taludes conforme normas técnicas e economicidade.",
+      color: "from-[#011B8B] to-[#2F81BF]",
+    },
+    {
+      icon: Map,
+      title: "Drenagem Pluvial",
+      description:
+        "Dimensionamento e detalhamento de sistemas de captação, condução e dissipação de águas pluviais, com base em estudos hidrológicos e hidráulicos atualizados.",
+      color: "from-[#2F81BF] to-[#011B8B]",
+    },
+    {
+      icon: Map,
+      title: "Projetos de Geotecnia",
+      description:
+        "Análise do subsolo, sondagens e dimensionamento de fundações, contenções e estabilidade de taludes, assegurando segurança e eficiência em obras civis.",
+      color: "from-[#011B8B] to-[#2F81BF]",
+    },
+    {
+      icon: Map,
+      title: "Projeto de Pavimentação",
+      description:
+        "Dimensionamento de camadas de pavimento flexível ou rígido conforme tráfego e tipo de solo, com especificações técnicas visando durabilidade e custo-benefício.",
+      color: "from-[#2F81BF] to-[#011B8B]",
+    },
+    {
+      icon: Map,
+      title: "Projetos de Reuso de Água",
+      description:
+        "Soluções para captação, tratamento e reaproveitamento de águas pluviais e cinzas, promovendo sustentabilidade hídrica em empreendimentos residenciais, comerciais e industriais.",
+      color: "from-[#2F81BF] to-[#011B8B]",
+    },
+    {
+      icon: Map,
+      title: "Projetos de Infraestrutura Verde",
+      description:
+        "Integração de soluções naturais ao ambiente urbano, como jardins de chuva, pavimentos permeáveis e bacias de retenção, contribuindo para a drenagem sustentável e valorização ambiental.",
+      color: "from-[#2F81BF] to-[#011B8B]",
+    },
+  ];
+
   return (
-    <section
-      id="servicos"
-      className="py-20 bg-gradient-to-br from-[#FFFFFF] to-[#011B8B]/5"
-    >
+    <section id="servicos" className="py-20 bg-gradient-to-br from-[#011B8B]">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -91,11 +133,11 @@ export default function Services() {
                 : "opacity-0 translate-y-10"
             }`}
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#011B8B] mb-4">
-              Nossos <span className="text-[#2F81BF]">Serviços</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#ffffff] mb-4">
+              Nossos <span className="text-[#68FFFF]">Serviços</span>
             </h2>
             <div className="w-24 h-1 bg-[#68FFFF] mx-auto mb-6"></div>
-            <p className="text-lg text-[#353535] max-w-3xl mx-auto">
+            <p className="text-lg text-[#ffffff] max-w-3xl mx-auto">
               Soluções completas em agrimensura e geotecnologia com a precisão
               que seu projeto exige
             </p>
@@ -131,6 +173,70 @@ export default function Services() {
                   <div className="p-6">
                     <p className="text-[#353535] mb-6 leading-relaxed">
                       {service.description}
+                    </p>
+
+                    {/* CTA */}
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="w-full border-[#011B8B] text-[#011B8B] hover:bg-[#011B8B] hover:text-[#FFFFFF] transition-all duration-300"
+                    >
+                      <Link href="#contato">Solicitar Orçamento</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Section Header */}
+          <div
+            className={`text-center mb-16 transition-all duration-1000 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#ffffff] mb-4">
+              Nossos <span className="text-[#68FFFF]">Projetos</span>
+            </h2>
+            <div className="w-24 h-1 bg-[#68FFFF] mx-auto mb-6"></div>
+            <p className="text-lg text-[#ffffff] max-w-3xl mx-auto">
+              Projetos inovadores e personalizados em engenharia e
+              infraestrutura para transformar suas ideias em realidade com
+              excelência técnica.
+            </p>
+          </div>
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className={`transition-all duration-1000 delay-${
+                  (index + 1) * 200
+                } ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                <div className="group bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#011B8B]/10">
+                  {/* Card Header */}
+                  <div
+                    className={`bg-gradient-to-r ${project.color} p-6 text-[#FFFFFF]`}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-[#68FFFF] rounded-full flex items-center justify-center">
+                        <project.icon className="w-6 h-6 text-[#011B8B]" />
+                      </div>
+                      <h3 className="text-xl font-bold">{project.title}</h3>
+                    </div>
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-6">
+                    <p className="text-[#353535] mb-6 leading-relaxed">
+                      {project.description}
                     </p>
 
                     {/* CTA */}

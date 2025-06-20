@@ -23,7 +23,11 @@ export default function About() {
   }, []);
 
   return (
-    <section id="sobre" className="py-20 bg-[#FFFFFF]">
+    <section
+      id="sobre"
+      className="py-20 bg-[#FFFFFF] bg-cover bg-center"
+      style={{ backgroundImage: "url('/bgTopografia.jpg')" }}
+    >
       <div className="container mx-auto px-4 lg:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -70,7 +74,6 @@ export default function About() {
                   <strong className="text-[#2F81BF]">
                     resultados confiáveis e ágeis
                   </strong>
-                  .
                 </p>
 
                 <div className="bg-[#011B8B]/5 p-6 rounded-lg border-l-4 border-[#68FFFF]">

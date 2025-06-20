@@ -120,11 +120,14 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-[#68FFFF] rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-[#68FFFF] rounded-full mt-2 animate-pulse"></div>
+      <a href="#sobre">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center">
+          <div className="w-6 h-10 border-2 border-[#68FFFF] rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-[#68FFFF] rounded-full mt-2 animate-pulse"></div>
+          </div>
+          <p className="mt-2 text-[#68FFFF] text-sm font-medium">Ver mais</p>
         </div>
-      </div>
+      </a>
     </section>
   );
 }

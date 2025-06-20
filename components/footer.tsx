@@ -15,14 +15,18 @@ export default function Footer() {
     { href: "#inicio", label: "Início" },
     { href: "#sobre", label: "Sobre" },
     { href: "#servicos", label: "Serviços" },
+    { href: "#diferenciais", label: "Diferenciais" },
     { href: "#contato", label: "Contato" },
   ];
 
   const services = [
-    { href: "#servicos", label: "Mapeamento Topográfico" },
-    { href: "#servicos", label: "Levantamento Planialtimétrico" },
-    { href: "#servicos", label: "Engenharia Aplicada" },
-    { href: "#servicos", label: "Geotecnologia com Drones" },
+    {
+      href: "#servicos",
+      label: "Georreferenciamento de Imóveis Rurais",
+    },
+    { href: "#servicos", label: "Levantamentos Topográficos" },
+    { href: "#servicos", label: "Inspeção de Barragens" },
+    { href: "#servicos", label: "Batimetria" },
   ];
 
   const socialLinks = [
@@ -149,14 +153,7 @@ export default function Footer() {
               © {currentYear} EM Agrimensura - Engenharia e Mapeamento. Todos os
               direitos reservados.
             </div>
-            <div className="flex space-x-6 text-xs text-[#FFFFFF]/60">
-              <Link href="#" className="hover:text-[#68FFFF] transition-colors">
-                Política de Privacidade
-              </Link>
-              <Link href="#" className="hover:text-[#68FFFF] transition-colors">
-                Termos de Uso
-              </Link>
-            </div>
+            <div className="flex space-x-6 text-xs text-[#FFFFFF]/60"></div>
           </div>
         </div>
       </div>

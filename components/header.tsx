@@ -29,16 +29,20 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#011B8B]/95 backdrop-blur-sm shadow-lg"
-          : "bg-[#011B8B]"
+          ? "bg-[#ffffff]/95 backdrop-blur-sm shadow-lg"
+          : "bg-[#ffffff]"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="#inicio" className="flex items-center space-x-2">
-            <div className="text-[#FFFFFF] font-bold text-xl tracking-wider">
-              <span className="text-[#68FFFF]">EM</span> Agrimensura
+            <div className="text-[#011a8b] font-bold text-xl tracking-wider">
+              <img
+                src="/Logo-Colorida.png"
+                alt="Logo EM Agrimensura"
+                className="h-64 w-auto"
+              />
             </div>
           </Link>
 
@@ -48,7 +52,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[#FFFFFF] hover:text-[#68FFFF] transition-colors duration-300 font-medium"
+                className="text-[#011a8b] hover:text-[#2F81BF] transition-colors duration-300 font-medium"
               >
                 {item.label}
               </Link>
