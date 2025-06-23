@@ -93,13 +93,6 @@ export default function Services() {
     },
     {
       icon: Map,
-      title: "Projetos de Geotecnia",
-      description:
-        "Análise do subsolo, sondagens e dimensionamento de fundações, contenções e estabilidade de taludes, assegurando segurança e eficiência em obras civis.",
-      color: "from-[#011B8B] to-[#2F81BF]",
-    },
-    {
-      icon: Map,
       title: "Projeto de Pavimentação",
       description:
         "Dimensionamento de camadas de pavimento flexível ou rígido conforme tráfego e tipo de solo, com especificações técnicas visando durabilidade e custo-benefício.",
@@ -110,13 +103,6 @@ export default function Services() {
       title: "Projetos de Reuso de Água",
       description:
         "Soluções para captação, tratamento e reaproveitamento de águas pluviais e cinzas, promovendo sustentabilidade hídrica em empreendimentos residenciais, comerciais e industriais.",
-      color: "from-[#2F81BF] to-[#011B8B]",
-    },
-    {
-      icon: Map,
-      title: "Projetos de Infraestrutura Verde",
-      description:
-        "Integração de soluções naturais ao ambiente urbano, como jardins de chuva, pavimentos permeáveis e bacias de retenção, contribuindo para a drenagem sustentável e valorização ambiental.",
       color: "from-[#2F81BF] to-[#011B8B]",
     },
   ];
