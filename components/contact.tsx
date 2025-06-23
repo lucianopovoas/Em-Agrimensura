@@ -43,9 +43,20 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Aqui você implementaria a lógica de envio do formulário
-    console.log("Form submitted:", formData);
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+    const whatsappNumber = "5531992798003"; // DDD + número, sem espaços ou traços
+    const message = `
+*Novo orçamento pelo site EM Agrimensura:*
+
+*Nome:* ${formData.name}
+*E-mail:* ${formData.email}
+*Tipo de Projeto:* ${formData.projectType}
+*Localização:* ${formData.location}
+*Mensagem:* ${formData.message}
+  `;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -161,16 +172,14 @@ export default function Contact() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="mapeamento">
-                            Mapeamento Topográfico
+                            Georreferenciamento de Imóveis Rurais
                           </SelectItem>
                           <SelectItem value="levantamento">
-                            Levantamento Planialtimétrico
+                            Levantamentos Topográficos
                           </SelectItem>
-                          <SelectItem value="engenharia">
-                            Engenharia Aplicada
-                          </SelectItem>
+                          <SelectItem value="engenharia">Batimetria</SelectItem>
                           <SelectItem value="geotecnologia">
-                            Geotecnologia com Drones
+                            Locação de Obra
                           </SelectItem>
                           <SelectItem value="outros">Outros</SelectItem>
                         </SelectContent>

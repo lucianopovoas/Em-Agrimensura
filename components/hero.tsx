@@ -17,6 +17,18 @@ export default function Hero() {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#011B8B] via-[#2F81BF] to-[#011B8B] overflow-hidden"
     >
+      {/* Background Image + Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/imagem-banner-hero.jpg"
+          alt="Banner EM Agrimensura"
+          className="w-full h-full object-cover object-center"
+          draggable={false}
+        />
+        {/* Overlay escuro com gradiente para sombreamento profissional */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#011B8BE6] via-[#2F81BFCC] to-[#011B8BE6]"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
+      </div>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 border border-[#68FFFF] rounded-full"></div>
@@ -34,6 +46,15 @@ export default function Hero() {
                 : "opacity-0 translate-y-10"
             }`}
           >
+            {/* Logo centralizada acima do h1 */}
+            <div className="flex justify-center">
+              <img
+                src="/logo-hero.png"
+                alt="Logo EM Agrimensura"
+                className="h-200 w-auto mb-4"
+                loading="lazy"
+              />
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#FFFFFF] mb-6 leading-tight">
               Precisão que Transforma{" "}
               <span className="text-[#68FFFF] relative">Territórios</span> em
@@ -122,8 +143,8 @@ export default function Hero() {
       {/* Scroll Indicator */}
       <a href="#sobre">
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce flex flex-col items-center">
-          <div className="w-6 h-10 border-2 border-[#68FFFF] rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-[#68FFFF] rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-6 border-2 border-[#68FFFF] rounded-full flex justify-center">
+            <div className="w-1 h-2 bg-[#68FFFF] rounded-full mt-2 animate-pulse"></div>
           </div>
           <p className="mt-2 text-[#68FFFF] text-sm font-medium">Ver mais</p>
         </div>

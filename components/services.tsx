@@ -32,13 +32,13 @@ export default function Services() {
         "Elaboração de memorial descritivo e planta georreferenciada conforme as exigências do INCRA, com precisão e confiabilidade para regularização fundiária.",
       color: "from-[#011B8B] to-[#2F81BF]",
     },
-    {
+    /*{
       icon: Cog,
       title: "Levantamentos Topográficos",
       description:
         "Levantamento planialtimétrico cadastral com estação total, GNSS e drone, atendendo às necessidades de obras civis, projetos de infraestrutura e loteamentos.",
       color: "from-[#2F81BF] to-[#011B8B]",
-    },
+    },*/
     {
       icon: Cog,
       title: "Levantamento Topográfico com LIDAR",
@@ -142,13 +142,12 @@ export default function Services() {
               que seu projeto exige
             </p>
           </div>
-
           {/* Services Grid */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`transition-all duration-1000 delay-${
+                className={`h-full flex transition-all duration-1000 delay-${
                   (index + 1) * 200
                 } ${
                   isVisible
@@ -156,7 +155,7 @@ export default function Services() {
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                <div className="group bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#011B8B]/10">
+                <div className="group bg-[#FFFFFF] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-[#011B8B]/10 flex flex-col h-full">
                   {/* Card Header */}
                   <div
                     className={`bg-gradient-to-r ${service.color} p-6 text-[#FFFFFF]`}
@@ -170,8 +169,8 @@ export default function Services() {
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-6">
-                    <p className="text-[#353535] mb-6 leading-relaxed">
+                  <div className="p-6 flex flex-col flex-1">
+                    <p className="text-[#353535] mb-6 leading-relaxed flex-1">
                       {service.description}
                     </p>
 
@@ -179,7 +178,7 @@ export default function Services() {
                     <Button
                       asChild
                       variant="outline"
-                      className="w-full border-[#011B8B] text-[#011B8B] hover:bg-[#011B8B] hover:text-[#FFFFFF] transition-all duration-300"
+                      className="w-full border-[#011B8B] text-[#011B8B] hover:bg-[#011B8B] hover:text-[#FFFFFF] transition-all duration-300 mt-auto"
                     >
                       <Link href="#contato">Solicitar Orçamento</Link>
                     </Button>
@@ -188,7 +187,20 @@ export default function Services() {
               </div>
             ))}
           </div>
-
+          {/* Fluxograma Profissional */}
+          <div className="w-screen flex justify-center my-16 relative left-1/2 -translate-x-1/2 bg-white">
+            <div className="bg-white/80 rounded-2xl p-4 sm:p-6 md:p-10 max-w-6xl w-full flex flex-col items-center">
+              <h3 className="text-xl sm:text-2xl font-bold text-[#011B8B] mb-4 sm:mb-6 text-center">
+                Fluxograma de Trabalho
+              </h3>
+              <img
+                src="/fluxograma.png"
+                alt="Fluxograma de Trabalho"
+                className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl rounded-lg shadow-lg border border-[#011B8B]/10 object-contain"
+                loading="lazy"
+              />
+            </div>
+          </div>
           {/* Section Header */}
           <div
             className={`text-center mb-16 transition-all duration-1000 ${
